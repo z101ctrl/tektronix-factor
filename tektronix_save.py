@@ -13,7 +13,7 @@ def tektronix_save(csv_file, save_path="", json_flag=False):
   headers = {}
 
   # csv file as dataframe
-  df = pd.read_csv(nombres_archivos[0], header=None)
+  df = pd.read_csv(csv_file, header=None)
 
   # select some parts
   df_aux = df.iloc[0:rows,0:columns]
