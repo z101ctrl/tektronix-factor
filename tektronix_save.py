@@ -27,10 +27,11 @@ def tektronix_save(csv_file, save_path="", json_flag=False):
     else:
       headers[df_aux.iloc[i,0]] = [df_aux.iloc[i,1], df_aux.iloc[i,2]]
 
-    # select some cols  
-    final_df = df.iloc[:,3:5]
-    # change cols index name
-    final_df.columns = [f'Time ({headers["Sample Interval"][1]})', headers["Vertical Units"]]
+  
+  # select some cols  
+  final_df = df.iloc[:,3:5]
+  # change cols index name
+  final_df.columns = [f'Time ({headers["Sample Interval"][1]})', headers["Vertical Units"]]
 
   # save the files
   if len(save_path) != 0: 
